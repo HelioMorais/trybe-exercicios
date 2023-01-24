@@ -31,6 +31,6 @@ else if (basesalario <= 4664.68) {
     descIR = (basesalario * 0.225) - 636.13;
 }
 else {
-    descIR = (basesalario * 0.227) - 869.36;
+    descIR = (basesalario * 0.275) - 869.36;
 }
-console.log(basesalario - descIR);
+console.log("O salario liquido  dessa pessoa é: ",  (basesalario - descIR));
