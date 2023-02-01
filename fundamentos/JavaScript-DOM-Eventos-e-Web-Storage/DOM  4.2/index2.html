@@ -1,0 +1,45 @@
+<main id="paiDoPai">
+    <section id="pai">
+        <section id="primeiroFilho"></section>
+        <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+        </section>
+        Atenção!
+        <section id="terceiroFilho"></section>
+        <section id="quartoEUltimoFilho"></section>
+    </section>
+    <script>
+        const pai = document.getElementById('pai'); // Recupere o elemento com o id pai
+        const irmaoElementoOndeVoceEsta = document.createElement('section'); // Crie um novo elemento
+        irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta'; // Recebe um ID
+        pai.appendChild(irmaoElementoOndeVoceEsta); // Adicione o elemento criado como filho do elemento com o id `pai`
+
+
+        const filho = document.getElementById(
+        'elementoOndeVoceEsta'); // Recupere o elemento com o id elementoOndeVoceEsta
+        const filhoElementoOndeVoceEsta = document.createElement('section'); // Crie um novo elemento
+        filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
+        elementoOndeVoceEsta.appendChild(
+        filhoElementoOndeVoceEsta); // Adicione o elemento criado como filho do elemento `elementoOndeVoceEsta`
+
+        const filho2 = document.getElementById(
+        'primeiroFilhoDoFilho'); // Recupere o elemento com o id primeiroFilhoDoFilho
+        const filhoDoPrimeiroFilhoDoFilho = document.createElement('section'); // Crie um novo elemento
+        filhoDoPrimeiroFilhoDoFilho.id = 'filhoDoPrimeiroFilhoDoFilho';
+        primeiroFilhoDoFilho.appendChild(
+        filhoDoPrimeiroFilhoDoFilho); // Adicione o elemento criado como filho do elemento `primeiroFilhoDoFilho`
+
+        const terceiroFilho = filhoPrimeiroFilhoDoFilho
+            .parentElement // primeiroFilhoDoFilho
+            .parentElement // elementoOndeVoceEsta
+            .nextElementSibling; // terceiroFilho
+        console.log(terceiroFilho);
+    </script>
+</main>
+
+//
+<!-- Crie um irmão para elementoOndeVoceEsta.
+// Crie um filho para elementoOndeVoceEsta.
+// Crie um filho para primeiroFilhoDoFilho.
+// A partir desse filho criado, acesse terceiroFilho. -->
