@@ -1,0 +1,42 @@
+<main id="paiDoPai">
+    <section id="pai">
+        <section id="primeiroFilho">
+            <h2>Primeiro Filho</h2>
+        </section>
+        <section id="elementoOndeVoceEsta">
+            <h2>Elemento que você deve remover</h2>
+        </section>
+        <section id="terceiroFilho">
+            <h2>Terceiro Filho</h2>
+        </section>
+        <section id="quartoEUltimoFilho">
+            <h2>Quarto Filho</h2>
+        </section>
+    </section>
+    <script>
+        const pai = document.getElementById('pai'); //Primeiro passo: Recupere o elemento com o id pai
+        //  Segundo passo: Utilize o .childNodes para retornar uma coleção viva de nós filhos do elemento pai.
+        const todosOsFilhos = pai.childNodes;
+
+        //Terceiro passo: Utilize uma estrutura de repetição para iterar sob o array todosOsFilhos.
+        //Utilize o .length para verificar o tamanho que todosOsFilhos possui;
+        //Como a primeira posição de um array é a posição 0, subtraia 1 do tamanho de todosOsFilhos;
+        //Decremente o index a cada iteração.
+        for (let index = todosOsFilhos.length - 1; index >= 0; index -= 1) {
+            //Quarto passo: Armazene o filho atual em uma variável.
+            const filhoAtual = todosOsFilhos[index];
+
+            // Quinto passo: Caso o id do filhoAtual seja igual a elementoOndeVoceEsta, remova o primeiro elemento do filhoAtual.
+            // Ao iterar sobre cada elemento do array filhoAtual será verificado se o id é igual a elementoOndeVoceEsta.
+            // O elemento a ser removido é a tag <h2> do filhoAtual que satisfez a condição estabelecida anteriormente.
+            // Utilizamos como parâmetro do removeChild o primeiro elemento do filhoAtual.
+
+            if (filhoAtual.id ===
+                'elementoOndeVoceEsta') { // verifica se o id do filho atual é igual a 'elementoOndeVoceEsta'
+                filhoAtual.removeChild(filhoAtual.firstElementChild); // remove o primeiro elemento do filho atual, no caso a tag <h2>
+
+
+            }
+        }
+    </script>
+</main>
