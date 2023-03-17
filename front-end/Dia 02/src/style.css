@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #171717;
+  color: white;
+  height: 70vh;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.1);
+  max-width: 900px;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.card img {
+  border-radius: 10px;
+  height: 450px;
+}
+
+h1 {
+  margin: 40px;
+  font-size: 50px;
+}
+
+p {
+  margin: 20px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #171717;
+  border: 2px solid #111111;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+}
+
+#button:hover {
+  background-color: #333;
+}
